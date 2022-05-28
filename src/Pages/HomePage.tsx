@@ -10,7 +10,7 @@ let HomePage = () => {
     let [editIcons, setEditIcons] = useState(false)
     return (
         <EditContext.Provider value={{ isEdit: editIcons }}>
-            <Button onClick={() => setEditIcons(!editIcons)}>dsafdsfdasfdsaf</Button>
+            <Button onClick={() => setEditIcons(!editIcons)}>test</Button>
             <Box p="1rem" sx={{ flexGrow: 1 }} >
                 <Grid container rowSpacing="8vmin" justifyContent="flex-start" alignContent='flex-start'>
                     {desktopIcons.map((element, index) => (
