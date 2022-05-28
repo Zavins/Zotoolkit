@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ThemeProvider, createTheme } from "@mui/material/styles"
 import { blue, red, green } from "@mui/material/colors"
 import { CssBaseline, useMediaQuery } from "@mui/material"
@@ -47,15 +46,13 @@ let App = () => {
 
     return (
         <React.StrictMode>
-            <BrowserRouter>
-                <QueryClientProvider client={queryClient}>
-                    <ThemeProvider theme={theme}>
-                        <CssBaseline />
-                        <LandingPage darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-                    </ThemeProvider>
-                    <ReactQueryDevtools></ReactQueryDevtools>
-                </QueryClientProvider>
-            </BrowserRouter>
+            <QueryClientProvider client={queryClient}>
+                <ThemeProvider theme={theme}>
+                    <CssBaseline />
+                    <LandingPage darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+                </ThemeProvider>
+                <ReactQueryDevtools></ReactQueryDevtools>
+            </QueryClientProvider>
         </React.StrictMode>
     )
 }
